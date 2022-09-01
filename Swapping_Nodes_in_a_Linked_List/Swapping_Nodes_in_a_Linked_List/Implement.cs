@@ -28,14 +28,14 @@
             int length = Puzzle(head);
             int nodeLastK = length - k;
             int counter = nodeLastK;
-            int counter2 = 0;
+            int counter2 = 1;
 
             var tempLastK = head;
             var tempFirstK = head;
 
             if (head.next == null)
             {
-               return head;
+                return head;
             }
             else
             {
@@ -46,7 +46,7 @@
                     counter--;
                 }
 
-                while (counter2 <= k)
+                while (counter2 < k)
                 {
                     tempFirstK = tempFirstK.next;
                     counter2++;
